@@ -1,0 +1,1 @@
+var H5P=H5P||{};H5P.SimpleRoundedButton=function(t){function e(e){var n=t("<div>",{class:"joubel-simple-rounded-button",title:e,role:"button",tabindex:"0"}).keydown(function(e){-1!==[32,13].indexOf(e.which)&&(t(this).click(),e.preventDefault())});return t("<span>",{class:"joubel-simple-rounded-button-text",html:e}).appendTo(n),n}return e}(H5P.jQuery);

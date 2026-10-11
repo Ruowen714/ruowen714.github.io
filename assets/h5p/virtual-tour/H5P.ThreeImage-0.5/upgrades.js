@@ -1,0 +1,1 @@
+var H5PUpgrades=H5PUpgrades||{};H5PUpgrades["H5P.ThreeImage"]={0:{2:function(e,o){if(e&&e.context&&e.context.behaviour&&e.context.behaviour.length){const o=e.context.behaviour;e.context.behaviour={audio:o}}o(null,e)},4:function(e,o){e&&e.behaviour&&(e.behaviour.label={showLabel:!1,labelPosition:"right"}),o(null,e)}}};

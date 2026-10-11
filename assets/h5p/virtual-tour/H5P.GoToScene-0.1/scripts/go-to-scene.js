@@ -1,0 +1,1 @@
+H5P.GoToScene=function(){function n(){this.attach=function(){}}return n}();

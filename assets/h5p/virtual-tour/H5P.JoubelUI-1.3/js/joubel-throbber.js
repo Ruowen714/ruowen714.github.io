@@ -1,0 +1,1 @@
+var H5P=H5P||{};H5P.JoubelThrobber=function(r){function e(){return r("<div/>",{class:"h5p-throbber"})}return e}(H5P.jQuery);

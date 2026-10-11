@@ -1,0 +1,1 @@
+H5P.AdvancedText=function(t,e){function a(t){var a=this;e.call(this);var c=void 0===t.text?"<em>New text</em>":t.text;a.attach=function(t){t.addClass("h5p-advanced-text").html(c)}}return a.prototype=Object.create(e.prototype),a.prototype.constructor=a,a}(H5P.jQuery,H5P.EventDispatcher);
