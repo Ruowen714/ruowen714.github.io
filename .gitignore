@@ -12,9 +12,13 @@ assets/libs/
 assets/rendercv/rendercv_output/*.typ
 al-folio-upgrade-report.md
 node_modules/
-output/playwright/
+output/
 test-results/
 vendor
+!assets/vendor/
+!assets/vendor/h5p-standalone/
+!assets/vendor/h5p-standalone/3.8.2/
+!assets/vendor/h5p-standalone/3.8.2/**
 
 # Python bytecode from bin/ helper scripts
 __pycache__/

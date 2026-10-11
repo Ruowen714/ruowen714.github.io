@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">Teaching Demo Coming Soon</title>
+  <desc id="description">A widescreen video placeholder for a forthcoming teaching demonstration.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#203a57" />
+      <stop offset="1" stop-color="#4f7093" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" rx="36" fill="url(#background)" />
+  <circle cx="800" cy="368" r="104" fill="#ffffff" opacity="0.96" />
+  <path d="M772 310l98 58-98 58z" fill="#315574" />
+  <text x="800" y="585" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="74" font-weight="700" fill="#ffffff">Teaching Demo</text>
+  <text x="800" y="665" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" fill="#e8f0f7">Coming Soon</text>
+</svg>

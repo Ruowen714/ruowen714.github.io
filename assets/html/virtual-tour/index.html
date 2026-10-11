@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Interactive Virtual Campus Tour</title>
+    <link rel="icon" href="data:," />
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Inter, "Segoe UI", sans-serif;
+      }
+
+      html,
+      body {
+        min-height: 100%;
+        margin: 0;
+        background: #f7f9fc;
+      }
+
+      main {
+        width: 100%;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      #h5p-container {
+        width: 100%;
+        min-height: 0;
+      }
+
+      .player-status {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 1rem;
+        color: #334155;
+        text-align: center;
+      }
+
+      .player-status--error {
+        color: #8b1e1e;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 class="sr-only">Virtual Tour at Wenzhou-Kean University</h1>
+      <p id="player-status" class="player-status" role="status" aria-live="polite">Loading the interactive tour…</p>
+      <div id="h5p-container" aria-describedby="player-status"></div>
+      <noscript>
+        <p class="player-status player-status--error">JavaScript is required to view this interactive tour.</p>
+      </noscript>
+    </main>
+
+    <script src="../../vendor/h5p-standalone/3.8.2/main.bundle.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const container = document.getElementById("h5p-container");
+        const status = document.getElementById("player-status");
+
+        try {
+          await new H5PStandalone.H5P(container, {
+            h5pJsonPath: "../../h5p/virtual-tour",
+            frameJs: "../../vendor/h5p-standalone/3.8.2/frame.bundle.js",
+            frameCss: "../../vendor/h5p-standalone/3.8.2/styles/h5p.css",
+            frame: true,
+            copyright: false,
+            export: false,
+            icon: false,
+            fullScreen: true,
+            embed: false,
+            reportingIsEnabled: false,
+            postUserStatistics: false,
+            saveFreq: false,
+          });
+
+          const playerFrame = container.querySelector("iframe");
+          if (playerFrame && !playerFrame.title) playerFrame.title = "Virtual campus tour content";
+          status.hidden = true;
+          container.removeAttribute("aria-describedby");
+        } catch (error) {
+          status.classList.add("player-status--error");
+          status.textContent = "The interactive tour could not be loaded. Please refresh the page and try again.";
+        }
+      });
+    </script>
+  </body>
+</html>
