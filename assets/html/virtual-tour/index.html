@@ -50,6 +50,38 @@
       .player-status--error {
         color: #8b1e1e;
       }
+
+      .tour-mobile-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.5rem;
+        padding: 0.75rem;
+        background: #f7f9fc;
+      }
+
+      .tour-mobile-actions[hidden] {
+        display: none;
+      }
+
+      .tour-mobile-actions button {
+        min-height: 44px;
+        padding: 0.65rem;
+        border: 1px solid #8293aa;
+        border-radius: 0.65rem;
+        background: #ffffff;
+        color: #334155;
+        font:
+          600 14px/1.4 Inter,
+          "Segoe UI",
+          sans-serif;
+        overflow-wrap: anywhere;
+        cursor: pointer;
+      }
+
+      .tour-mobile-actions button:focus-visible {
+        outline: 3px solid #334155;
+        outline-offset: 2px;
+      }
     </style>
   </head>
   <body>
@@ -57,6 +89,7 @@
       <h1 class="sr-only">Virtual Tour at Wenzhou-Kean University</h1>
       <p id="player-status" class="player-status" role="status" aria-live="polite">Loading the interactive tour…</p>
       <div id="h5p-container" aria-describedby="player-status"></div>
+      <nav id="tour-mobile-actions" class="tour-mobile-actions" aria-label="Current scene activities" hidden></nav>
       <noscript>
         <p class="player-status player-status--error">JavaScript is required to view this interactive tour.</p>
       </noscript>
@@ -92,8 +125,38 @@
             const stylesheet = frameDocument.createElement("link");
             stylesheet.id = "portfolio-tour-mobile";
             stylesheet.rel = "stylesheet";
-            stylesheet.href = new URL("mobile.css", window.location.href).href;
+            stylesheet.href = new URL("mobile.css?v=2", window.location.href).href;
             frameDocument.head.append(stylesheet);
+            const actions = document.getElementById("tour-mobile-actions");
+            const mobile = window.matchMedia("(max-width: 900px), (pointer: coarse)");
+            let previousButtons = [];
+            const updateActions = () => {
+              const buttons = [
+                ...frameDocument.querySelectorAll(
+                  ".image-scene-wrapper .nav-button-wrapper > button.nav-button, .three-sixty-scene-wrapper .nav-button-wrapper > button.nav-button, .hud .nav-button-wrapper > button.nav-button, .h5p-go-back-button > button.nav-button"
+                ),
+              ];
+              frameDocument.documentElement.classList.toggle("portfolio-mobile-controls", mobile.matches);
+              actions.hidden = !mobile.matches;
+              if (buttons.length === previousButtons.length && buttons.every((button, index) => button === previousButtons[index])) return;
+              previousButtons = buttons;
+              actions.replaceChildren();
+              buttons.forEach((original) => {
+                const button = document.createElement("button");
+                const decoder = document.createElement("textarea");
+                decoder.innerHTML = original.getAttribute("aria-label") || "View activity";
+                button.type = "button";
+                button.textContent = decoder.value;
+                button.addEventListener("click", () => {
+                  original.click();
+                  container.scrollIntoView({ block: "start", behavior: "auto" });
+                });
+                actions.append(button);
+              });
+            };
+            new MutationObserver(updateActions).observe(frameDocument.documentElement, { childList: true, subtree: true });
+            mobile.addEventListener("change", updateActions);
+            updateActions();
           };
           installMobileStyles();
           playerFrame?.addEventListener("load", installMobileStyles);

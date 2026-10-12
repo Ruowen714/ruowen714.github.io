@@ -878,8 +878,8 @@ body.fixed-top-nav {
   }
 
   .portfolio-project-stage .portfolio-tour-frame {
-    height: auto;
-    aspect-ratio: 4 / 3;
+    height: min(34rem, 75svh);
+    aspect-ratio: auto;
   }
 
   .portfolio-tour-frame iframe {
