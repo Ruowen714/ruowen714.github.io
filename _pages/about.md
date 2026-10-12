@@ -198,14 +198,24 @@ I believe that students learn best when they have opportunities to communicate, 
     <header class="portfolio-section-heading">
       <p class="portfolio-section-kicker">Lesson preview</p>
       <h2 id="teaching-demo-title">Teaching Demo</h2>
-      <p>A classroom teaching demonstration will be added here soon.</p>
+      <p>An A1–A2 communicative English lesson on ordering food and drinks.</p>
     </header>
-    <div class="portfolio-demo-panel portfolio-demo-split">
-      <img src="{{ '/assets/img/teaching-demo-placeholder.svg' | relative_url }}" alt="Teaching demo coming soon">
-      <div>
-        <h3>Video coming soon</h3>
-        <p>A full teaching demonstration is being prepared for this portfolio. The final video will include a brief lesson context, learning objectives, classroom interaction, and a short reflection on instructional choices.</p>
-        <p>In the meantime, explore my <a href="#section-teaching-experience">Teaching Experience</a> for examples of my work with adult ESL, literacy, and K–12 English learners.</p>
+    <div class="portfolio-demo-panel">
+      <video
+        class="portfolio-demo-video"
+        controls
+        playsinline
+        preload="metadata"
+        poster="{{ '/assets/img/teaching-demo-poster.jpg' | relative_url }}"
+        aria-describedby="home-teaching-demo-description"
+      >
+        <source src="{{ '/assets/video/teaching-demo.mp4' | relative_url }}" type="video/mp4">
+        Your browser does not support HTML video. You can
+        <a href="{{ '/assets/video/teaching-demo.mp4' | relative_url }}">open the teaching demonstration video directly</a>.
+      </video>
+      <div class="portfolio-demo-details">
+        <h3>Ordering Food and Drinks</h3>
+        <p id="home-teaching-demo-description">This teaching demonstration presents an A1–A2 communicative English lesson on ordering food and drinks. English and Chinese subtitles are included.</p>
       </div>
     </div>
   </section>
