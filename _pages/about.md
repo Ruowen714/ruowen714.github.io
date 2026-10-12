@@ -48,7 +48,7 @@ I believe that students learn best when they have opportunities to communicate, 
         <span class="portfolio-highlight-copy">
           <strong>Teaching Philosophy</strong>
           <span>Supportive, communicative, and student-centered learning grounded in meaningful practice.</span>
-          <span class="portfolio-highlight-actions"><a href="#section-teaching-philosophy">Explore philosophy <span aria-hidden="true">→</span></a></span>
+          <span class="portfolio-highlight-actions"><a href="#section-teaching-philosophy" aria-label="Explore teaching philosophy">Explore →</a></span>
         </span>
       </article>
     </li>
@@ -65,7 +65,7 @@ I believe that students learn best when they have opportunities to communicate, 
         <span class="portfolio-highlight-copy">
           <strong>Teaching Experience in China</strong>
           <span>K–12 English teaching, university academic support, and curriculum development.</span>
-          <span class="portfolio-highlight-actions"><a href="#experience-china-k-12-education-and-university-academic-support">View China experience <span aria-hidden="true">→</span></a></span>
+          <span class="portfolio-highlight-actions"><a href="#experience-china-k-12-education-and-university-academic-support" aria-label="View teaching experience in China">Explore →</a></span>
         </span>
       </article>
     </li>
@@ -83,7 +83,7 @@ I believe that students learn best when they have opportunities to communicate, 
           <strong>Teaching Experience in the U.S.A.</strong>
           <span>Individualized elementary literacy support and practical adult ESL instruction.</span>
           <span class="portfolio-highlight-actions">
-            <a href="#experience-us-elementary-education">Elementary Education</a>
+            <a href="#experience-us-elementary-education" aria-label="Elementary education experience">Elementary</a>
             <a href="#experience-us-adult-esl-education">Adult ESL</a>
           </span>
         </span>
@@ -103,9 +103,9 @@ I believe that students learn best when they have opportunities to communicate, 
           <strong>Curriculum Design, Teaching Demo &amp; Project Design</strong>
           <span>Lesson planning, a subtitled teaching demonstration, and an interactive campus tour.</span>
           <span class="portfolio-highlight-actions">
-            <a href="#section-teaching-experience">Curriculum</a>
-            <a href="#section-teaching-demo">Teaching Demo</a>
-            <a href="#section-project">Project</a>
+            <a href="#section-teaching-experience" aria-label="Curriculum design experience">Plans</a>
+            <a href="#section-teaching-demo" aria-label="Watch teaching demo">Demo</a>
+            <a href="#section-project" aria-label="Explore interactive project">Project</a>
           </span>
         </span>
       </article>
@@ -123,7 +123,7 @@ I believe that students learn best when they have opportunities to communicate, 
         <span class="portfolio-highlight-copy">
           <strong>Publications</strong>
           <span>Research on communicative teaching and AI literacy in teacher education.</span>
-          <span class="portfolio-highlight-actions"><a href="#section-research">Explore research <span aria-hidden="true">→</span></a></span>
+          <span class="portfolio-highlight-actions"><a href="#section-research" aria-label="Explore publications">Explore →</a></span>
         </span>
       </article>
     </li>
@@ -140,7 +140,7 @@ I believe that students learn best when they have opportunities to communicate, 
         <span class="portfolio-highlight-copy">
           <strong>Cross-Cultural Communication</strong>
           <span>Interpretation, international collaboration, student leadership, and community service.</span>
-          <span class="portfolio-highlight-actions"><a href="#section-more-experience">View more experience <span aria-hidden="true">→</span></a></span>
+          <span class="portfolio-highlight-actions"><a href="#section-more-experience" aria-label="Explore cross-cultural experience">Explore →</a></span>
         </span>
       </article>
     </li>
@@ -157,7 +157,7 @@ I believe that students learn best when they have opportunities to communicate, 
         <span class="portfolio-highlight-copy">
           <strong>Certificates</strong>
           <span>TESOL professional preparation and advanced English-language proficiency.</span>
-          <span class="portfolio-highlight-actions"><a href="#section-certificates">View certificates <span aria-hidden="true">→</span></a></span>
+          <span class="portfolio-highlight-actions"><a href="#section-certificates" aria-label="View certificates">Explore →</a></span>
         </span>
       </article>
     </li>
@@ -174,7 +174,7 @@ I believe that students learn best when they have opportunities to communicate, 
         <span class="portfolio-highlight-copy">
           <strong>CV</strong>
           <span>Education, teaching experience, certificates, leadership, and service.</span>
-          <span class="portfolio-highlight-actions"><a href="#section-cv">Read CV <span aria-hidden="true">→</span></a></span>
+          <span class="portfolio-highlight-actions"><a href="#section-cv">View CV →</a></span>
         </span>
       </article>
     </li>
