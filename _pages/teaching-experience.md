@@ -22,6 +22,9 @@ nav_order: 2
         </div>
       {% endif %}
       <p>{{ experience.body }}</p>
+      {% if experience.title == 'US Elementary Education' %}
+        <img class="portfolio-experience-photo" src="{{ '/assets/img/teaching-glance-literacy-support.jpg' | relative_url }}" alt="Ruowen Sun providing individualized literacy support" loading="lazy" decoding="async">
+      {% endif %}
     </article>
   {% endfor %}
 </div>

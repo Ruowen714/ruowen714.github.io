@@ -85,8 +85,8 @@ I believe that students learn best when they have opportunities to communicate, 
       <article class="portfolio-highlight-card">
         <span class="portfolio-highlight-media portfolio-highlight-media--usa">
           <img
-            src="{{ '/assets/img/teaching-glance-literacy-support.jpg' | relative_url }}"
-            alt="Ruowen Sun providing individualized literacy support to an elementary student"
+            src="{{ '/assets/img/teaching-glance-adult-esl.jpg' | relative_url }}"
+            alt="Ruowen Sun teaching an adult English class"
             loading="lazy"
             decoding="async"
           >
@@ -227,6 +227,9 @@ I believe that students learn best when they have opportunities to communicate, 
             </div>
           {% endif %}
           <p>{{ experience.body }}</p>
+          {% if experience.title == 'US Elementary Education' %}
+            <img class="portfolio-experience-photo" src="{{ '/assets/img/teaching-glance-literacy-support.jpg' | relative_url }}" alt="Ruowen Sun providing individualized literacy support" loading="lazy" decoding="async">
+          {% endif %}
         </article>
       {% endfor %}
     </div>
