@@ -21,6 +21,17 @@
     const navLinks = [...(navbar?.querySelectorAll("a.nav-link") ?? [])];
     if (!navbar || navLinks.length === 0) return;
 
+    function updateNavigationMetrics() {
+      const navHeight = Math.ceil(navbar.getBoundingClientRect().height);
+      document.documentElement.style.setProperty("--portfolio-nav-height", `${navHeight}px`);
+    }
+
+    updateNavigationMetrics();
+    window.addEventListener("resize", updateNavigationMetrics);
+    if ("ResizeObserver" in window) {
+      new ResizeObserver(updateNavigationMetrics).observe(navbar);
+    }
+
     const homeUrl = new URL(navLinks[0].href, window.location.href);
     const homePath = normalizePath(homeUrl.pathname);
     const currentPath = normalizePath(window.location.pathname.replace(/index\.html$/, ""));
@@ -53,6 +64,15 @@
       link.querySelector(".sr-only")?.remove();
       linkBySection.set(sectionId, link);
     });
+
+    const cvDownload = document.querySelector('.post-header a.float-right[href$=".pdf"]');
+    if (cvDownload && !cvDownload.classList.contains("portfolio-cv-download")) {
+      cvDownload.classList.add("portfolio-download-link", "portfolio-cv-download");
+      cvDownload.setAttribute("aria-label", "Download CV (PDF) in a new tab");
+      const label = document.createElement("span");
+      label.textContent = "Download CV (PDF)";
+      cvDownload.append(label);
+    }
 
     function setActiveLink(sectionId) {
       linkBySection.forEach((link, id) => {

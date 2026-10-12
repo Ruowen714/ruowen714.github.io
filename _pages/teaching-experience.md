@@ -2,7 +2,7 @@
 layout: page
 title: Teaching Experience
 permalink: /teaching-experience/
-description: Learner-centered English teaching across adult ESL, K–12 literacy, and higher education.
+description: Student-centered English teaching across adult ESL, K–12 literacy, and higher education.
 nav: true
 nav_order: 2
 ---

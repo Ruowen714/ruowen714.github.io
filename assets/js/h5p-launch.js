@@ -5,6 +5,7 @@
     const targetId = button.getAttribute("aria-controls");
     const source = button.dataset.h5pSrc;
     const target = targetId ? document.getElementById(targetId) : null;
+    const stage = target?.closest("[data-h5p-stage]");
 
     if (!target || !source) return;
 
@@ -33,9 +34,11 @@
     }
 
     target.hidden = false;
+    stage?.classList.add("is-loaded");
     button.setAttribute("aria-expanded", "true");
-    button.textContent = "Tour loaded";
-    iframe.focus();
+    button.textContent = "Interactive tour loaded";
+    button.disabled = true;
+    window.requestAnimationFrame(() => iframe.focus());
   };
 
   const initializeLaunchButtons = () => {

@@ -44,72 +44,151 @@ I believe that students learn best when they have opportunities to communicate, 
   <a href="#section-cv">CV</a>
 </nav>
 
-<section class="portfolio-highlights" aria-labelledby="teaching-at-a-glance">
-  <h2 id="teaching-at-a-glance">Teaching at a glance</h2>
+<section class="portfolio-highlights" aria-labelledby="portfolio-overview">
+  <h2 id="portfolio-overview">Overview</h2>
   <ul class="portfolio-highlight-grid">
     <li>
-      <a class="portfolio-highlight-link" href="#experience-us-adult-esl-education">
-        <span class="portfolio-highlight-media">
+      <article class="portfolio-highlight-card">
+        <span class="portfolio-highlight-media portfolio-highlight-media--philosophy">
           <img
-            src="{{ '/assets/img/teaching-glance-adult-esl.jpg' | relative_url }}"
-            alt="Ruowen Sun teaching an adult English class"
+            src="{{ '/assets/img/overview-teaching-philosophy.jpg' | relative_url }}"
+            alt="Students taking part in an interactive English classroom activity"
             loading="lazy"
             decoding="async"
           >
         </span>
         <span class="portfolio-highlight-copy">
-          <strong>Adult ESL Teaching</strong>
-          <span>Designing communicative lessons and role-plays based on real-life situations, including shopping, healthcare, transportation, and food ordering.</span>
+          <strong>Teaching Philosophy</strong>
+          <span>Supportive, communicative, and student-centered learning grounded in meaningful practice.</span>
+          <span class="portfolio-highlight-actions"><a href="#section-teaching-philosophy">Explore philosophy <span aria-hidden="true">→</span></a></span>
         </span>
-      </a>
+      </article>
     </li>
     <li>
-      <a class="portfolio-highlight-link" href="#section-teaching-experience">
-        <span class="portfolio-highlight-media portfolio-highlight-media--literacy">
+      <article class="portfolio-highlight-card">
+        <span class="portfolio-highlight-media portfolio-highlight-media--china">
+          <img
+            src="{{ '/assets/img/overview-teaching-china.jpg' | relative_url }}"
+            alt="Ruowen Sun teaching an English lesson in China"
+            loading="lazy"
+            decoding="async"
+          >
+        </span>
+        <span class="portfolio-highlight-copy">
+          <strong>Teaching Experience in China</strong>
+          <span>K–12 English teaching, university academic support, and curriculum development.</span>
+          <span class="portfolio-highlight-actions"><a href="#experience-china-k-12-education-and-university-academic-support">View China experience <span aria-hidden="true">→</span></a></span>
+        </span>
+      </article>
+    </li>
+    <li>
+      <article class="portfolio-highlight-card">
+        <span class="portfolio-highlight-media portfolio-highlight-media--usa">
           <img
             src="{{ '/assets/img/teaching-glance-literacy-support.jpg' | relative_url }}"
-            alt="Ruowen Sun providing one-to-one literacy support"
+            alt="Ruowen Sun providing individualized literacy support to an elementary student"
             loading="lazy"
             decoding="async"
           >
         </span>
         <span class="portfolio-highlight-copy">
-          <strong>Literacy &amp; Academic Support</strong>
-          <span>Providing individualized reading, writing, and English language support for elementary and university students.</span>
+          <strong>Teaching Experience in the U.S.A.</strong>
+          <span>Individualized elementary literacy support and practical adult ESL instruction.</span>
+          <span class="portfolio-highlight-actions">
+            <a href="#experience-us-elementary-education">Elementary Education</a>
+            <a href="#experience-us-adult-esl-education">Adult ESL</a>
+          </span>
         </span>
-      </a>
+      </article>
     </li>
     <li>
-      <a class="portfolio-highlight-link" href="#section-project">
-        <span class="portfolio-highlight-media">
+      <article class="portfolio-highlight-card">
+        <span class="portfolio-highlight-media portfolio-highlight-media--demo">
           <img
-            src="{{ '/assets/img/teaching-glance-curriculum-resources.jpg' | relative_url }}"
-            alt="Classroom reading materials and learning resources"
+            src="{{ '/assets/img/teaching-demo-poster.jpg' | relative_url }}"
+            alt="Teaching demonstration video preview"
             loading="lazy"
             decoding="async"
           >
         </span>
         <span class="portfolio-highlight-copy">
-          <strong>Curriculum &amp; Assessment</strong>
-          <span>Developing lesson plans, adapting authentic materials, and using student performance and feedback to improve instruction.</span>
+          <strong>Curriculum Design, Teaching Demo &amp; Project Design</strong>
+          <span>Lesson planning, a subtitled teaching demonstration, and an interactive campus tour.</span>
+          <span class="portfolio-highlight-actions">
+            <a href="#section-teaching-experience">Curriculum</a>
+            <a href="#section-teaching-demo">Teaching Demo</a>
+            <a href="#section-project">Project</a>
+          </span>
         </span>
-      </a>
+      </article>
     </li>
     <li>
-      <a class="portfolio-highlight-link" href="#section-more-experience">
+      <article class="portfolio-highlight-card">
+        <span class="portfolio-highlight-media portfolio-highlight-media--publications">
+          <img
+            src="{{ '/assets/img/overview-publications-library.jpg' | relative_url }}"
+            alt="Library shelves and study materials representing Ruowen Sun's publications"
+            loading="lazy"
+            decoding="async"
+          >
+        </span>
+        <span class="portfolio-highlight-copy">
+          <strong>Publications</strong>
+          <span>Research on communicative teaching and AI literacy in teacher education.</span>
+          <span class="portfolio-highlight-actions"><a href="#section-research">Explore research <span aria-hidden="true">→</span></a></span>
+        </span>
+      </article>
+    </li>
+    <li>
+      <article class="portfolio-highlight-card">
         <span class="portfolio-highlight-media">
           <img
             src="{{ '/assets/img/teaching-glance-cross-cultural-materials.jpg' | relative_url }}"
-            alt="Individualized classroom folders and learning materials"
+            alt="Classroom materials used in cross-cultural learning"
             loading="lazy"
             decoding="async"
           >
         </span>
         <span class="portfolio-highlight-copy">
           <strong>Cross-Cultural Communication</strong>
-          <span>Working with learners from diverse linguistic and cultural backgrounds through teaching, interpretation, and student leadership.</span>
+          <span>Interpretation, international collaboration, student leadership, and community service.</span>
+          <span class="portfolio-highlight-actions"><a href="#section-more-experience">View more experience <span aria-hidden="true">→</span></a></span>
         </span>
-      </a>
+      </article>
+    </li>
+    <li>
+      <article class="portfolio-highlight-card">
+        <span class="portfolio-highlight-media portfolio-highlight-media--certificate">
+          <img
+            src="{{ '/assets/img/credentials/tesol-advanced-certification.jpg' | relative_url }}"
+            alt="Redacted TESOL Advanced Certification preview"
+            loading="lazy"
+            decoding="async"
+          >
+        </span>
+        <span class="portfolio-highlight-copy">
+          <strong>Certificates</strong>
+          <span>TESOL professional preparation and advanced English-language proficiency.</span>
+          <span class="portfolio-highlight-actions"><a href="#section-certificates">View certificates <span aria-hidden="true">→</span></a></span>
+        </span>
+      </article>
+    </li>
+    <li>
+      <article class="portfolio-highlight-card">
+        <span class="portfolio-highlight-media portfolio-highlight-media--cv">
+          <img
+            src="{{ '/assets/img/portrait-of-ruowen-sun.jpg' | relative_url }}"
+            alt="Portrait of Ruowen Sun"
+            loading="lazy"
+            decoding="async"
+          >
+        </span>
+        <span class="portfolio-highlight-copy">
+          <strong>CV</strong>
+          <span>Education, teaching experience, certificates, leadership, and service.</span>
+          <span class="portfolio-highlight-actions"><a href="#section-cv">Read CV <span aria-hidden="true">→</span></a></span>
+        </span>
+      </article>
     </li>
   </ul>
 </section>
@@ -119,10 +198,10 @@ I believe that students learn best when they have opportunities to communicate, 
     <header class="portfolio-section-heading">
       <p class="portfolio-section-kicker">My approach</p>
       <h2 id="teaching-philosophy-title">Teaching Philosophy</h2>
-      <p>A learner-centered approach to meaningful, communicative English teaching.</p>
+      <p>A student-centered approach to meaningful, communicative English teaching.</p>
     </header>
     <div class="portfolio-prose">
-      <p>I believe that language learning should be meaningful, communicative, and connected to students' real lives. My teaching focuses on creating a supportive and learner-centered classroom where students feel comfortable practicing English, making mistakes, and sharing their ideas. I use authentic materials, role-plays, and interactive activities to help students apply what they learn to real-life situations. I also recognize that every student has different needs and learning goals, so I adjust my teaching based on their progress and feedback. My goal is to help students become more confident, independent, and motivated English learners.</p>
+      <p>I believe that language learning should be meaningful, communicative, and connected to students' real lives. My teaching focuses on creating a supportive and student-centered classroom where students feel comfortable practicing English, making mistakes, and sharing their ideas. I use authentic materials, role-plays, and interactive activities to help students apply what they learn to real-life situations. I also recognize that every student has different needs and learning goals, so I adjust my teaching based on their progress and feedback. My goal is to help students become more confident, independent, and motivated English learners.</p>
     </div>
   </section>
 
@@ -130,7 +209,7 @@ I believe that students learn best when they have opportunities to communicate, 
     <header class="portfolio-section-heading">
       <p class="portfolio-section-kicker">Classrooms and learners</p>
       <h2 id="teaching-experience-title">Teaching Experience</h2>
-      <p>Learner-centered English teaching across adult ESL, K–12 literacy, and higher education in the United States and China.</p>
+      <p>Student-centered English teaching across adult ESL, K–12 literacy, and higher education in the United States and China.</p>
     </header>
     <div class="portfolio-experience-list">
       {% for experience in site.data.teaching_experience %}
@@ -159,10 +238,16 @@ I believe that students learn best when they have opportunities to communicate, 
       <h2 id="project-title">Project</h2>
       <p>An interactive campus tour that connects place-based exploration with English listening, speaking, and comprehension practice.</p>
     </header>
-    <article class="portfolio-project-card">
-      <div class="portfolio-project-cover" aria-hidden="true">
-        <i class="fa-solid fa-map-location-dot"></i>
-        <span>45 campus scenes</span>
+    <article class="portfolio-project-card" data-h5p-card>
+      <div class="portfolio-project-stage" data-h5p-stage>
+        <img
+          class="portfolio-project-preview"
+          src="{{ '/assets/img/project-virtual-tour-start.jpg' | relative_url }}"
+          alt="Illustrated map of the Wenzhou-Kean University campus, the starting scene of the interactive tour"
+          loading="lazy"
+          decoding="async"
+        >
+        <div id="home-virtual-tour" class="portfolio-tour-frame" hidden></div>
       </div>
       <div class="portfolio-project-copy">
         <p class="portfolio-project-eyebrow">Interactive H5P experience</p>
@@ -184,13 +269,8 @@ I believe that students learn best when they have opportunities to communicate, 
           >
             Launch Interactive Tour
           </button>
-          <a class="portfolio-secondary-action" href="{{ '/assets/html/virtual-tour/' | relative_url }}" target="_blank" rel="noopener noreferrer">
-            Open in a new tab
-            <span class="sr-only"> (opens in a new tab)</span>
-          </a>
         </div>
       </div>
-      <div id="home-virtual-tour" class="portfolio-tour-frame" hidden></div>
     </article>
   </section>
 
@@ -324,7 +404,7 @@ I believe that students learn best when they have opportunities to communicate, 
       </div>
       <a class="portfolio-download-link" href="{{ page.cv_pdf | relative_url }}" target="_blank" rel="noopener noreferrer">
         <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
-        Download CV
+        Download CV (PDF)
         <span class="sr-only"> (opens in a new tab)</span>
       </a>
     </header>

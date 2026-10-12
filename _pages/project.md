@@ -7,10 +7,16 @@ nav: true
 nav_order: 3
 ---
 
-<article class="portfolio-project-card" aria-labelledby="virtual-tour-title">
-  <div class="portfolio-project-cover" aria-hidden="true">
-    <i class="fa-solid fa-map-location-dot"></i>
-    <span>45 campus scenes</span>
+<article class="portfolio-project-card" aria-labelledby="virtual-tour-title" data-h5p-card>
+  <div class="portfolio-project-stage" data-h5p-stage>
+    <img
+      class="portfolio-project-preview"
+      src="{{ '/assets/img/project-virtual-tour-start.jpg' | relative_url }}"
+      alt="Illustrated map of the Wenzhou-Kean University campus, the starting scene of the interactive tour"
+      loading="eager"
+      decoding="async"
+    >
+    <div id="project-virtual-tour-frame" class="portfolio-tour-frame" hidden></div>
   </div>
   <div class="portfolio-project-copy">
     <p class="portfolio-project-eyebrow">Interactive H5P experience</p>
@@ -34,13 +40,8 @@ nav_order: 3
       >
         Launch Interactive Tour
       </button>
-      <a class="portfolio-secondary-action" href="{{ '/assets/html/virtual-tour/index.html' | relative_url }}" target="_blank" rel="noopener noreferrer">
-        Open in a new tab
-        <span class="sr-only"> (opens in a new tab)</span>
-      </a>
     </div>
   </div>
-  <div id="project-virtual-tour-frame" class="portfolio-tour-frame" hidden></div>
 </article>
 
 <script defer src="{{ '/assets/js/h5p-launch.js' | relative_url }}"></script>
