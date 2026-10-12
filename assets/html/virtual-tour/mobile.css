@@ -1,0 +1,20 @@
+/* Keep scene hotspots legible without overlapping labels on narrow screens. */
+@media (max-width: 767px) {
+  .image-scene-wrapper .nav-label-container,
+  .three-sixty-scene-wrapper .nav-label-container {
+    display: none !important;
+  }
+
+  .image-scene-wrapper .nav-button,
+  .three-sixty-scene-wrapper .nav-button {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.28);
+  }
+
+  .nav-button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+  }
+}

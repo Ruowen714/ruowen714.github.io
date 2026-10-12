@@ -86,6 +86,17 @@
 
           const playerFrame = container.querySelector("iframe");
           if (playerFrame && !playerFrame.title) playerFrame.title = "Virtual campus tour content";
+          const installMobileStyles = () => {
+            const frameDocument = playerFrame?.contentDocument;
+            if (!frameDocument?.head || frameDocument.getElementById("portfolio-tour-mobile")) return;
+            const stylesheet = frameDocument.createElement("link");
+            stylesheet.id = "portfolio-tour-mobile";
+            stylesheet.rel = "stylesheet";
+            stylesheet.href = new URL("mobile.css", window.location.href).href;
+            frameDocument.head.append(stylesheet);
+          };
+          installMobileStyles();
+          playerFrame?.addEventListener("load", installMobileStyles);
           status.hidden = true;
           container.removeAttribute("aria-describedby");
         } catch (error) {
