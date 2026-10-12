@@ -1,5 +1,11 @@
 /* Keep scene hotspots legible without overlapping labels on narrow screens. */
-@media (max-width: 767px) {
+@media (max-width: 900px), (pointer: coarse) {
+  html.portfolio-mobile-controls .image-scene-wrapper .nav-button-wrapper,
+  html.portfolio-mobile-controls .h5p-go-back-button,
+  html.portfolio-mobile-controls .three-sixty-scene-wrapper .nav-button-wrapper,
+  html.portfolio-mobile-controls .hud .nav-button-wrapper {
+    display: none !important;
+  }
   .image-scene-wrapper .nav-label-container,
   .three-sixty-scene-wrapper .nav-label-container {
     display: none !important;
