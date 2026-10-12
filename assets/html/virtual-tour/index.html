@@ -82,6 +82,18 @@
         outline: 3px solid #334155;
         outline-offset: 2px;
       }
+
+      .tour-marker-letter {
+        display: inline-grid;
+        place-items: center;
+        min-width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0.4rem;
+        border-radius: 50%;
+        background: #334155;
+        color: white;
+        font-weight: 700;
+      }
     </style>
   </head>
   <body>
@@ -125,7 +137,7 @@
             const stylesheet = frameDocument.createElement("link");
             stylesheet.id = "portfolio-tour-mobile";
             stylesheet.rel = "stylesheet";
-            stylesheet.href = new URL("mobile.css?v=2", window.location.href).href;
+            stylesheet.href = new URL("mobile.css?v=3", window.location.href).href;
             frameDocument.head.append(stylesheet);
             const actions = document.getElementById("tour-mobile-actions");
             const mobile = window.matchMedia("(max-width: 900px), (pointer: coarse)");
@@ -141,12 +153,22 @@
               if (buttons.length === previousButtons.length && buttons.every((button, index) => button === previousButtons[index])) return;
               previousButtons = buttons;
               actions.replaceChildren();
+              let markerIndex = 0;
               buttons.forEach((original) => {
                 const button = document.createElement("button");
                 const decoder = document.createElement("textarea");
                 decoder.innerHTML = original.getAttribute("aria-label") || "View activity";
                 button.type = "button";
-                button.textContent = decoder.value;
+                const isBack = original.closest(".h5p-go-back-button");
+                const letter = isBack ? "←" : String.fromCharCode(65 + markerIndex++);
+                if (!isBack) {
+                  original.dataset.tourLetter = letter;
+                  original.parentElement.classList.add("portfolio-letter-marker");
+                }
+                const badge = document.createElement("span");
+                badge.className = "tour-marker-letter";
+                badge.textContent = letter;
+                button.append(badge, document.createTextNode(decoder.value));
                 button.addEventListener("click", () => {
                   original.click();
                   container.scrollIntoView({ block: "start", behavior: "auto" });
