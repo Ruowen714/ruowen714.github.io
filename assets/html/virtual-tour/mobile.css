@@ -23,4 +23,25 @@
     outline: 3px solid #ffffff;
     outline-offset: 2px;
   }
+
+  html.portfolio-mobile-controls .nav-button-wrapper.portfolio-letter-marker {
+    display: inline-flex !important;
+  }
+
+  html.portfolio-mobile-controls .portfolio-letter-marker .nav-button {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ffffff;
+    background: #334155;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  html.portfolio-mobile-controls .portfolio-letter-marker .nav-button::before {
+    content: attr(data-tour-letter);
+    font:
+      700 13px/1 Arial,
+      sans-serif;
+    height: auto;
+    color: #ffffff;
+  }
 }
