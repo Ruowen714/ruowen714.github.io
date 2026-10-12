@@ -93,8 +93,8 @@ I believe that students learn best when they have opportunities to communicate, 
       <article class="portfolio-highlight-card">
         <span class="portfolio-highlight-media portfolio-highlight-media--demo">
           <img
-            src="{{ '/assets/img/teaching-demo-poster.jpg' | relative_url }}"
-            alt="Teaching demonstration video preview"
+            src="{{ '/assets/img/teaching-glance-literacy-support.jpg' | relative_url }}"
+            alt="Ruowen Sun guiding a student through an individualized learning activity"
             loading="lazy"
             decoding="async"
           >
@@ -215,9 +215,6 @@ I believe that students learn best when they have opportunities to communicate, 
             </div>
           {% endif %}
           <p>{{ experience.body }}</p>
-          {% if experience.title == 'US Elementary Education' %}
-            <img class="portfolio-experience-photo" src="{{ '/assets/img/teaching-glance-literacy-support.jpg' | relative_url }}" alt="Ruowen Sun providing individualized literacy support" loading="lazy" decoding="async">
-          {% endif %}
         </article>
       {% endfor %}
     </div>
@@ -231,6 +228,7 @@ I believe that students learn best when they have opportunities to communicate, 
     </header>
     <article class="portfolio-project-card" data-h5p-card>
       <div class="portfolio-project-stage" data-h5p-stage>
+        <button type="button" class="portfolio-tour-expand" aria-expanded="false" aria-controls="home-virtual-tour">Expand tour</button>
         <div id="home-virtual-tour" class="portfolio-tour-frame">
           <iframe class="portfolio-h5p-frame" src="{{ '/assets/html/virtual-tour/' | relative_url }}" title="Interactive virtual campus tour" loading="eager" allow="fullscreen" allowfullscreen></iframe>
         </div>
@@ -298,7 +296,7 @@ I believe that students learn best when they have opportunities to communicate, 
             <strong>{{ research.publication.status }}</strong><br>
             {{ research.publication.venue }}{% if research.publication.date %} · {{ research.publication.date }}{% endif %}
           </p>
-          <p>{{ research.summary }}</p>
+          <ul class="portfolio-research-summary"><li><strong>Research focus:</strong> {{ research.summary }}</li></ul>
           <h4>My contributions</h4>
           <ul>
             {% for contribution in research.contributions %}

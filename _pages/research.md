@@ -26,7 +26,7 @@ nav_order: 5
         {{ research.publication.venue }}{% if research.publication.date %} · {{ research.publication.date }}{% endif %}
         {% if research.publication.event_dates %}<br>{{ research.publication.event_dates }}{% endif %}
       </p>
-      <p>{{ research.summary }}</p>
+      <ul class="portfolio-research-summary"><li><strong>Research focus:</strong> {{ research.summary }}</li></ul>
       <h3 class="portfolio-research-subheading">My contributions</h3>
       <ul>
         {% for contribution in research.contributions %}

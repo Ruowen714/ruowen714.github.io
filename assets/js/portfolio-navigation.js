@@ -17,6 +17,44 @@
   }
 
   function initPortfolioNavigation() {
+    const search = document.querySelector("ninja-keys");
+    if (search) {
+      const closeSearch = document.createElement("button");
+      closeSearch.type = "button";
+      closeSearch.slot = "footer";
+      closeSearch.className = "portfolio-search-close";
+      closeSearch.textContent = "Close search";
+      closeSearch.addEventListener("click", () => {
+        search.close();
+        document.getElementById("search-toggle")?.focus();
+      });
+      search.append(closeSearch);
+    }
+    document.querySelectorAll(".portfolio-tour-expand").forEach((button) => {
+      const stage = button.closest(".portfolio-project-stage");
+      let previousOverflow = "";
+      const closeTour = () => {
+        stage.classList.remove("is-expanded");
+        button.setAttribute("aria-expanded", "false");
+        button.textContent = "Expand tour";
+        document.body.style.overflow = previousOverflow;
+        button.focus({ preventScroll: true });
+      };
+      button.addEventListener("click", () => {
+        if (stage.classList.contains("is-expanded")) {
+          closeTour();
+        } else {
+          previousOverflow = document.body.style.overflow;
+          stage.classList.add("is-expanded");
+          button.setAttribute("aria-expanded", "true");
+          button.textContent = "Close expanded tour";
+          document.body.style.overflow = "hidden";
+        }
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && stage.classList.contains("is-expanded")) closeTour();
+      });
+    });
     const navbar = document.querySelector("#navbar");
     const navLinks = [...(navbar?.querySelectorAll("a.nav-link") ?? [])];
     if (!navbar || navLinks.length === 0) return;

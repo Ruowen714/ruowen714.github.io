@@ -352,6 +352,10 @@ body.fixed-top-nav {
   object-position: center 22%;
 }
 
+.post article .portfolio-highlight-media--demo img {
+  object-position: center 22%;
+}
+
 .portfolio-highlight-media--certificate {
   background: #ffffff;
 }
@@ -809,6 +813,105 @@ body.fixed-top-nav {
   background: #ffffff;
 }
 
+.portfolio-tour-expand {
+  display: none;
+  min-height: 44px;
+  padding: 0.55rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--portfolio-heading-color);
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.portfolio-search-close {
+  display: block;
+  width: calc(100% - 1rem);
+  min-height: 44px;
+  margin: 0.5rem;
+  border: 1px solid var(--portfolio-control-border);
+  border-radius: 0.5rem;
+  background: var(--portfolio-blue-soft);
+  color: var(--portfolio-heading-color);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.portfolio-project-stage.is-expanded {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  aspect-ratio: auto;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.portfolio-project-stage.is-expanded .portfolio-tour-expand {
+  display: block;
+  flex-shrink: 0;
+  align-self: flex-end;
+  margin: 0.4rem;
+}
+
+.portfolio-project-stage.is-expanded .portfolio-tour-frame {
+  flex: 1;
+  min-height: 0;
+  height: auto;
+  aspect-ratio: auto;
+}
+
+@media (max-width: 767.98px) {
+  .portfolio-tour-expand {
+    display: block;
+    margin: 0.35rem auto;
+  }
+
+  .portfolio-project-stage {
+    aspect-ratio: auto;
+  }
+
+  .portfolio-project-stage .portfolio-tour-frame {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .portfolio-tour-frame iframe {
+    height: 100%;
+  }
+
+  .post article {
+    overflow-wrap: anywhere;
+  }
+
+  .portfolio-highlight-actions {
+    height: 3.5rem;
+  }
+
+  .portfolio-highlight-actions a,
+  .portfolio-research-links a {
+    min-height: 44px;
+  }
+
+  #navbar.navbar .navbar-nav .nav-item .nav-link,
+  #navbar #search-toggle .nav-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    box-sizing: border-box;
+  }
+
+  #toc-sidebar {
+    position: static !important;
+  }
+}
+
 .portfolio-research-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -853,6 +956,19 @@ body.fixed-top-nav {
 
 .portfolio-research-card > ul {
   margin-bottom: 1.25rem;
+  padding-left: 1.4rem;
+  list-style: disc outside;
+}
+
+.portfolio-research-card > ul > li {
+  display: list-item;
+  margin-bottom: 0.65rem;
+  padding-left: 0.15rem;
+}
+
+.portfolio-research-card > ul > li::marker {
+  color: var(--portfolio-heading-color);
+  font-size: 1.15em;
 }
 
 .portfolio-research-meta {

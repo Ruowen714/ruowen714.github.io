@@ -9,6 +9,7 @@ nav_order: 3
 
 <article class="portfolio-project-card" aria-labelledby="virtual-tour-title" data-h5p-card>
   <div class="portfolio-project-stage" data-h5p-stage>
+    <button type="button" class="portfolio-tour-expand" aria-expanded="false" aria-controls="project-virtual-tour-frame">Expand tour</button>
     <div id="project-virtual-tour-frame" class="portfolio-tour-frame">
       <iframe class="portfolio-h5p-frame" src="{{ '/assets/html/virtual-tour/' | relative_url }}" title="Interactive virtual campus tour" loading="eager" allow="fullscreen" allowfullscreen></iframe>
     </div>
