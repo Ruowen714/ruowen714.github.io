@@ -32,18 +32,6 @@ I believe that students learn best when they have opportunities to communicate, 
 
 </div>
 
-<nav class="portfolio-cta" aria-label="Portfolio sections">
-  <a href="#section-home">Home</a>
-  <a href="#section-teaching-philosophy">Teaching Philosophy</a>
-  <a href="#section-teaching-experience">Teaching Experience</a>
-  <a href="#section-project">Project</a>
-  <a href="#section-teaching-demo">Teaching Demo</a>
-  <a href="#section-research">Research</a>
-  <a href="#section-certificates">Certificates</a>
-  <a href="#section-more-experience">More Experience</a>
-  <a href="#section-cv">CV</a>
-</nav>
-
 <section class="portfolio-highlights" aria-labelledby="portfolio-overview">
   <h2 id="portfolio-overview">Overview</h2>
   <ul class="portfolio-highlight-grid">
